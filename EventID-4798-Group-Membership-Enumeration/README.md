@@ -32,5 +32,5 @@ source="security.evtx" EventCode=4798
   
 **Take Further steps (The pivot & Escalation):**
 * **Scope the Account:** Check if the `Account_Name` performing the enumeration belongs to a **Domain Admin** or a **standard user**. A standard user running these commands is **highly suspicious**.
-* **Correlate Timelines:** Copy the specific `ComputerName` or `Account_Name` and run a follow-up query to check a 30-minute window before and after the event. Look for Event ID 4624 (Successful Logons) to find where they connected from, or Event ID 4688 (Process Creation) to see what malicious files they executed next. *(Look at the next project/section to check how we run and verify Event ID 4624)*.
+* **Correlate Timelines:** Copy the specific `ComputerName` or `Account_Name` and run a follow-up query to check a 30-minute window before and after the event. Look for Event ID 4624 (Successful Logons) to find where they connected from, or Event ID 4688 (Process Creation) to see what malicious files they executed next. ***(Look at the next project/section to check how we run and verify Event ID 4624)***.
 * **Containment:** If the activity is confirmed malicious, escalate to L2/Incident Response to isolate the workstation from the network.
