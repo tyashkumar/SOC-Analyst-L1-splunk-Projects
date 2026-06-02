@@ -19,9 +19,9 @@ Attackers often check group memebrship to:
 -Plan lateral movement
 
 ## Detection Logic (splunk Query)
-source="security.evtx" EventCode=4798 
+**source="security.evtx" EventCode=4798 
 | stats count by Process_Name, Account_Name, ComputerName
-| sort - count
+| sort - count**
 <img width="1788" height="872" alt="Screenshot 2026-06-02 130201" src="https://github.com/user-attachments/assets/83d7c011-8b4c-4471-8703-bf366054f015" />
 ## "How SOC Analyst Investigates This and take Futher step"?
 **Analyze the Process & Establish a Baseline:**
