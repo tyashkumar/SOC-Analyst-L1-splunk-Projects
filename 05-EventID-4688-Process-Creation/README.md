@@ -11,9 +11,8 @@ This use case monitors the execution of new processes, binaries, or command-line
 source="security.evtx" EventCode=4688 
 | table _time, host, Account_Name, Process_Name, CommandLine
 
+<img width="1318" height="988" alt="4688" src="https://github.com/user-attachments/assets/4f0d7911-342a-48eb-a9ce-55504b0b262f" />
 
-
-<img width="1318" height="988" alt="4688" src="https://github.com/user-attachments/assets/...">
 
 
 **SOC Use Case Analysis
