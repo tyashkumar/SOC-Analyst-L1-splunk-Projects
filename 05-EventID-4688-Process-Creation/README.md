@@ -12,7 +12,6 @@ source="security.evtx" EventCode=4688
 
 <img width="1318" height="988" alt="4688" src="https://github.com/user-attachments/assets/57810221-5a76-45d6-ad13-78942a6b9fde" />
 
-
 **SOC Use Case Analysis
 -SOC analysts monitor Event ID 4688 to map application execution baselines:
 
