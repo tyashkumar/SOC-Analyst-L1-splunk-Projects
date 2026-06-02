@@ -21,3 +21,4 @@ source="security.evtx" EventCode=4624
 
 ## Note
 All data is lab-generated and anonymized.
+<img width="1486" height="339" alt="4624" src="https://github.com/user-attachments/assets/1396dbd6-8edc-470c-8155-81096b6ec5a4" />
