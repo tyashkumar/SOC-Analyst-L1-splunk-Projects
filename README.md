@@ -17,10 +17,10 @@ The projects are designed to simulate real-world SOC Analyst L1 workflows, inclu
 | Event ID | Detection Use Case                 | Status      |
 | -------- | ---------------------------------- | ----------- |
 | 4798     | Local Group Membership Enumeration | Completed   |
-| 4625     | Failed Login Detection             | In Progress |
-| 4672     | Privileged Logon Detection         | Planned     |
-| 4688     | Process Creation Monitoring        | Planned     |
-| 4648     | Explicit Credential Usage          | Planned     |
+| 4625     | Failed Login Detection             | Completed   |
+| 4672     | Privileged Logon Detection         | Completed   |
+| 4688     | Process Creation Monitoring        | Completed   |
+| 4624     | Successful -Login                  | Completed   |
 
 ## Skills Demonstrated
 
