@@ -32,6 +32,8 @@ The projects are designed to simulate real-world SOC Analyst L1 workflows, inclu
 * Splunk SPL Development
 * MITRE ATT&CK Mapping
 
+## Threat Intelligence
+- [Threat Intelligence Reports](./Threat-Intelligence-Reports) - Integrating TI feeds (AlienVault, MISP) with Splunk logs.
 ## Author
 
 Yash Kumar
