@@ -11,20 +11,23 @@ This section focuses on Integrating Threat Intelligence (TI) feeds and Indicator
 ## Active Projects / Use Cases
 1. **Malicious IP Correlation:** Cross-referencing Splunk authentication logs with active threat feeds.
 2. **Phishing IOCs:** Tracking known malicious domains and hashes.
-3. 
-### 🔴 Case 1: Lecture Lab Verification - Tor Exit Node / Malicious Outbound Traffic
+ 
+### 🔴 Case 1: Malicious Outbound Traffic
 * **Destination IP:** `185.220.100.254`
 * **Network Port:** `443` (HTTPS) / `80` (HTTP)
 * **Attack Type:** Anonymized Traffic / Potential Command & Control (C2) Communication
-* **Analyst Breakdown:** This specific IP address serves as a verified Tor Exit Node. In a corporate SOC environment, outbound traffic destined for a Tor exit node triggers a high-severity alert. Threat actors leverage Tor infrastructure to obfuscate their true identity during data exfiltration or active scanning phases.
-* **OSINT Verification:** ![VirusTotal Screenshot](./artifacts/vt-case1.png)
+  
+* **OSINT Verification:** <img width="907" height="479" alt="image" src="https://github.com/user-attachments/assets/0b31b4ba-c121-4398-99d2-63a21009cb58" />
 
----
+### 📋 SOC Analyst Verdict: True Positive (TP)
+* **Reasoning:** OSINT enrichment via threat intelligence platforms confirms that the destination IP is a verified Tor Exit Node. Corporate policy strictly prohibits unauthorized anonymized traffic. 
+* **Severity:** High / Critical (Due to potential data exfiltration risk).
+  
+**Since it is a True Positive**
+  ### 🛡️ Incident Response & Mitigation Actions
 
-### 📊 Practical Triage Simulation (Based on Coursework)
-Following the exact incident workflow demonstrated in the **Day 18 SOC Course**, here is how the triage plan maps out:
-
-1. **Detection:** SIEM logs capture an active outbound connection from internal host `10.0.0.15` to `185.220.100.254`.
-2. **OSINT Verification:** Analyst pivots the IP to VirusTotal/AbuseIPDB and confirms its malicious reputation as a public Tor proxy.
-3. **Scope Analysis:** Analyst searches internal firewall and DNS logs to uncover the total blast radius (discovering if other internal hosts have contacted it).
-4. **Incident Response Trigger:** The confirmed IOC shifts into "Evidence of Compromise," initiating host isolation protocols via EDR.
+1. **Host Isolation (Containment):** Immediately isolate the source endpoint from the corporate network using the EDR tool (e.g., CrowdStrike, Defender) to block further communication or potential data exfiltration.
+2. **Network Blocking:** Coordinate with the Network/Firewall team to block outbound traffic to the malicious IP across the entire organizational boundary.
+3. **Log Investigation (Splunk Hunting):** * Review process execution logs (**Event ID 4688** / Sysmon) around the time of the alert to identify which process/binary initiated the connection.
+   * Run a Splunk query to calculate total `bytes_out` to determine if any massive data exfiltration took place.
+4. **Credential Remediation:** Force a password reset for the user account associated with the compromised endpoint, treating the credentials as potentially compromised.
