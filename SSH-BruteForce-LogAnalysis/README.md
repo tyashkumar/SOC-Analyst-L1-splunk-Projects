@@ -1,19 +1,21 @@
 # Hands- On Lab: SSH Brute-Force Attack Simulation & Log Analysis
 
 ## Project Overview 
-This Project Explain about Brute-force attack simualtion on kali linux.Real- security logs  of failed login attempts and what soc anayalst will take action.
+This Project Explain about Brute-force attack simulation on kali linux.Real-security logs of failed login attempts and what soc anayalst will take action.
 
 # Tools used
-Operation system- Oracle kali Linux
-Attack Tool: Hydra(Atool used to guess passwords quickly)
-Defensive Tool: journalct1(The Built-in tool to view system logs in newer versions of kali)
-Framework:MITRE ATT&CK matrix(A guide used to identify hacker techniques)
+-Operating system- Oracle kali Linux
+-Attack Tool: Hydra(Atool used to guess passwords quickly)
+-Defensive Tool: journalctl(The Built-in tool to view system logs in newer versions of kali)
+-Framework:MITRE ATT&CK matrix(A guide used to identify hacker techniques)
 
 **Step-by-Step Execution & Methodology**
 
 ## The command used 
 ## Step 1
+```bash
 sudo systemctl status ssh
+```
 ## Output
 <img width="841" height="302" alt="image" src="https://github.com/user-attachments/assets/af652611-0e62-48f8-a823-c14a9fc826a4" />
 
@@ -26,15 +28,15 @@ hydra -l kali -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4
 **Finding the Logs**
 **sudo journalctl _SYSTEMD_UNIT=ssh.service | grep "Failed password"**
 
-Newer versions of Kali Linux do not use the old text file at /var/log/auth.log. Instead, logs are saved in a system database. To pull up the failed password attempts, I used this command to filter the database
+Newer verison of Kali Linux do not use the old text file at /var/log/auth.log. Instead, logs are saved in a system database. To pull up the failed password attempts, I used this command to filter the database
 
 ## Threat Analysis & Evidence
+## Threat Analysis & Evidence
+```text
 Jun 05 08:38:48 kali sshd-session[17611]: Failed password for kali from 127.0.0.1 port 46526 ssh2
 Jun 05 08:38:48 kali sshd-session[17610]: Failed password for kali from 127.0.0.1 port 46516 ssh2
-Jun 05 08:38:49 kali sshd-session[17613]: Failed password for kali from 127.0.0.1 port 46538 ssh2
-Jun 05 08:38:49 kali sshd-session[17612]: Failed password for kali from 127.0.0.1 port 46532 ssh2
-
-## Explaination-
+```
+## Explanation-
 **-Jun 05 08:38:48 -> When it happened**
 **-kali -> The computer name: The name of your virtual machine (the hostname)**
 **-sshd-session[17611] -> The program tracking it: The SSH service on your computer handled this connection request. The number in brackets is just an ID the system gave to this specific connection try.**
