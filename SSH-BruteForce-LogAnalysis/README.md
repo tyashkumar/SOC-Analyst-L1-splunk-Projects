@@ -21,7 +21,10 @@ sudo systemctl status ssh
 
 **First, I turned on the SSH service on my machine. Then, I used Hydra to launch a password-guessing attack against my own local account (kali) using a built-in password list file.**
 ## step 2 
+## step 2
+```bash
 hydra -l kali -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4
+```
 <img width="869" height="255" alt="image" src="https://github.com/user-attachments/assets/238f9c95-06a7-4189-ab6b-1dcb78f33c55" />
 
 ## step 3
@@ -39,10 +42,15 @@ Jun 05 08:38:48 kali sshd-session[17610]: Failed password for kali from 127.0.0.
 ## Explanation-
 **-Jun 05 08:38:48 -> When it happened**
 **-kali -> The computer name: The name of your virtual machine (the hostname)**
+
 **-sshd-session[17611] -> The program tracking it: The SSH service on your computer handled this connection request. The number in brackets is just an ID the system gave to this specific connection try.**
+
 **-Failed password for kali -> What happened: Someone tried to log into the account named kali but typed the wrong password.**
+
 **-from 127.0.0.1 -> Where it came from:"The Exact computer"**
+
 **port 46526 -> The doorway used: The random tracking port Hydra used to send that specific password guess**
+
 **-ssh2 -> The connection type-used  verison 2 of the secure shell protocol**
 
 ## SOC Action Looking at this task 
