@@ -33,7 +33,6 @@ hydra -l kali -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4
 Newer verison of Kali Linux do not use the old text file at /var/log/auth.log. Instead, logs are saved in a system database. To pull up the failed password attempts, I used this command to filter the database
 
 ## Threat Analysis & Evidence
-## Threat Analysis & Evidence
 ```text
 Jun 05 08:38:48 kali sshd-session[17611]: Failed password for kali from 127.0.0.1 port 46526 ssh2
 Jun 05 08:38:48 kali sshd-session[17610]: Failed password for kali from 127.0.0.1 port 46516 ssh2
