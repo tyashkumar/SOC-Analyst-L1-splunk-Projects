@@ -21,7 +21,6 @@ sudo systemctl status ssh
 
 **First, I turned on the SSH service on my machine. Then, I used Hydra to launch a password-guessing attack against my own local account (kali) using a built-in password list file.**
 ## step 2 
-## step 2
 ```bash
 hydra -l kali -P /usr/share/wordlists/fasttrack.txt ssh://127.0.0.1 -t 4
 ```
