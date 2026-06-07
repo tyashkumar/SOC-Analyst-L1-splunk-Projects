@@ -38,9 +38,6 @@ This repository contains the cybersecurity projects I completed while learning S
 * Understanding Windows security events
 * Writing basic investigation reports
 
-  ## About Me
-
-I am  SOC operations, log analysis, threat detection, and incident investigation through hands-on projects and labs.
-
+  ## About Me-
 Connect with me on LinkedIn: www.linkedin.com/in/t-yash-kumar
 Contact on: 9491882708
