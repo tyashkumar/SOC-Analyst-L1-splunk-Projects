@@ -1,4 +1,5 @@
-# SOC Analyst L1 - Splunk Projects
+# SOC Analyst L1 - Projects
+# Splunk Projects
 
 ## Overview
 
