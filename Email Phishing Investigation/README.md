@@ -2,7 +2,7 @@
 
 # Overview 
 **This investigation was conducted on a suspicious email received with the subject:"IPL final ke liye reward"**
-The main movtive for **Investigation -rekhamanchu@its1winin.com** is to **identify Email is Legitimate or part of a phsishing spam.**
+The main motive for **Investigation -rekhamanchu@its1winin.com** is to **identify Email is Genuine or part of a phishing spam.**
 
 # Email Overview
 <img width="1210" height="576" alt="spam Email 1" src="https://github.com/user-attachments/assets/aea1439c-47c3-43aa-9521-a55a06dbb7a9" />
@@ -14,18 +14,16 @@ The main movtive for **Investigation -rekhamanchu@its1winin.com** is to **identi
 **Delivery Date- 01 june 2026**
 
 **Observation**
-The  Email claimed that a reward/free bet was available for the IPL Final and contained URL Link encouraging the receipient to clcik and  claim the offer.
+The  Email claimed that a reward/free bet was available for the IPL Final and contained URL Link encouraging the recipient to click and  claim the offer.
 
 **Investigation Process**
 **1.Email Header Analysis -Using MXToolbox Email Header Analyzer.**
 <img width="1483" height="823" alt="spam Email" src="https://github.com/user-attachments/assets/4cdd2f99-e8da-4a91-9dac-421802895c50" />
 
 **Findings**
-**- SPF Authentication: Pass
-- SPF Alignment: Pass
-- DKIM Authentication: Pass
-- DKIM Alignment: Pass
-- DMARC: No Record Found**
+- **SPF Authentication & Alignment**: Pass
+-**DKIM Authentication & Alignment:** Pass
+- **DMARC:** No Record Found**
 
  SPF and DKIM validation succeeded,But the absence of a DMARC policy reduces protection against domain spoofing.
 
