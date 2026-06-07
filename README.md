@@ -1,5 +1,5 @@
 # SOC Analyst L1 Portfolio
-# Splunk Projects # Phishing Email Analysis #windows Logs
+# Splunk Query's ,Phishing Email Analysising,Windows Logs
 This repository contains the cybersecurity projects I completed while learning SOC operations and security monitoring.
 
 ## Projects
@@ -37,3 +37,10 @@ This repository contains the cybersecurity projects I completed while learning S
 * Checking IPs, URLs, and domains using threat intelligence tools
 * Understanding Windows security events
 * Writing basic investigation reports
+
+  ## About Me
+
+I am  SOC operations, log analysis, threat detection, and incident investigation through hands-on projects and labs.
+
+Connect with me on LinkedIn: www.linkedin.com/in/t-yash-kumar
+Contact on: 9491882708
