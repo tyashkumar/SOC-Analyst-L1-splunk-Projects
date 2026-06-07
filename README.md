@@ -1,42 +1,39 @@
-# SOC Analyst L1 - Projects
-# Splunk Projects
+# SOC Analyst L1 Portfolio
+# Splunk Projects # Phishing Email Analysis #windows Logs
+This repository contains the cybersecurity projects I completed while learning SOC operations and security monitoring.
 
-## Overview
+## Projects
 
-This repository contains Security Operations Center (SOC) detection and investigation projects performed using Splunk Enterprise and Windows Security Event Log sample datasets.
+### Splunk Use Cases
 
-The projects are designed to simulate real-world SOC Analyst L1 workflows, including threat detection, log analysis, event investigation, and MITRE ATT&CK mapping using publicly available training and sample log data.
+* Event ID 4624 - Successful Login Analysis
+* Event ID 4625 - Failed Login Detection
+* Event ID 4672 - Privileged Account Monitoring
+* Event ID 4688 - Process Creation Detection
+* Event ID 4798 - Group Membership Enumeration
+
+### Investigations
+
+* Email Phishing Investigation
+* SSH Brute Force Attack Analysis
+
+### Threat Intelligence
+
+* IOC Investigation Report
 
 ## Tools Used
 
 * Splunk Enterprise
-* Windows Security Event Log Sample Data
-* MITRE ATT&CK Framework
+* Windows Event Logs
+* VirusTotal
+* AbuseIPDB
+* URLScan
+* WHOIS
 
-## Use Cases
+## What I Learned
 
-| Event ID | Detection Use Case                 | Status      |
-| -------- | ---------------------------------- | ----------- |
-| 4798     | Local Group Membership Enumeration | Completed   |
-| 4625     | Failed Login Detection             | Completed   |
-| 4672     | Privileged Logon Detection         | Completed   |
-| 4688     | Process Creation Monitoring        | Completed   |
-| 4624     | Successful -Login                  | Completed   |
-
-## Skills Demonstrated
-
-* Security Monitoring
-* Log Analysis
-* Threat Hunting
-* Event Investigation
-* Detection Engineering
-* Splunk SPL Development
-* MITRE ATT&CK Mapping
-
-## Threat Intelligence
-- [Threat Intelligence Reports](./Threat-Intelligence-Reports) - Integrating TI feeds (AlienVault, MISP) with Splunk logs.
-## Author
-
-Yash Kumar
-
-SOC Analyst L1 Learning Portfolio
+* Searching and analyzing logs in Splunk
+* Investigating phishing emails
+* Checking IPs, URLs, and domains using threat intelligence tools
+* Understanding Windows security events
+* Writing basic investigation reports
